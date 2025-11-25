@@ -51,15 +51,7 @@ export default function App() {
           return () => clearTimeout(t);
         }
       }
-      
-      // 5. Game finished - show result modal, wait for user to choose Continue or Reset
-      // REMOVED: Automatic PAYOUT dispatch - now user clicks a button in the modal
-      // case 'RESULT': {
-      //     const t = setTimeout(() => {
-      //         dispatch({ type: 'PAYOUT' }); 
-      //     }, 3000);
-      //     return () => clearTimeout(t);
-      // }
+
     }
   }, [state.phase, state.dealerHidden, state.dealer]);
 

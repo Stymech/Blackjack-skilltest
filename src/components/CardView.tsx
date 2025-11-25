@@ -14,7 +14,7 @@ type Props = {
   index?: number; 
 };
 
-// Component for the Card Back (unchanged)
+// Component for the Card Back
 const CardBack: React.FC = () => (
   <img 
     src={getCardBackPath()} 
@@ -23,7 +23,7 @@ const CardBack: React.FC = () => (
   />
 );
 
-// Component for the Card Face (unchanged)
+// Component for the Card Face
 const CardFace: React.FC<{ card: Card }> = ({ card }) => {
   const imagePath = getCardImagePath(card.rank, card.suit);
   const altText = `${card.rank} of ${card.suit}`;
@@ -103,9 +103,9 @@ export default function CardView({ card, hidden = false, index = 0 }: Props) {
             rotateY: hidden ? 180 : 180, // Always start face down (180°)
           }}
           animate={{
-            rotateY: flipRotation, // Flip to final state
+            rotateY: flipRotation,
             transition: {
-              delay: flipDelay, // Delay the flip
+              delay: flipDelay,
               duration: 0.7, 
               ease: "easeInOut",
             },

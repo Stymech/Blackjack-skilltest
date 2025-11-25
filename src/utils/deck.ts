@@ -1,7 +1,6 @@
 // src/utils/deck.ts
 import type { Card, Rank, Suit } from '../types';
 
-// Use the letters directly
 const SUITS: Suit[] = ['S', 'H', 'D', 'C']; // Spades, Hearts, Diamonds, Clubs
 const RANKS: Rank[] = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']; 
 

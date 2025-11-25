@@ -33,7 +33,7 @@ export const BettingControls: React.FC<BettingControlsProps> = ({
             onClick={() => onBet(value)}
             // Check if betting this amount exceeds player's available funds
             disabled={playerMoney - currentBet < value}
-            whileHover={{ scale: 1.05 }} // Subtle chip zoom is kept for chips only
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
               width: '60px',
@@ -57,14 +57,14 @@ export const BettingControls: React.FC<BettingControlsProps> = ({
         ))}
       </div>
       
-      {/* 2. Current Bet & Action Buttons (using action-button classes) */}
+      {/* 2. Current Bet & Action Buttons */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
         
         {/* CLEAR BUTTON */}
         <button 
             onClick={onClear} 
             disabled={currentBet === 0}
-            className="action-button clear-button" // Applies styling
+            className="action-button clear-button"
         >
             Clear Bet
         </button>
@@ -73,7 +73,7 @@ export const BettingControls: React.FC<BettingControlsProps> = ({
         <button
           onClick={onDeal}
           disabled={!canDeal}
-          className="action-button deal-button" // Applies styling
+          className="action-button deal-button"
         >
           Deal
         </button>
@@ -85,9 +85,9 @@ export const BettingControls: React.FC<BettingControlsProps> = ({
 
 // Simple helper to assign chip colors
 function getColorForChip(value: number): string {
-  if (value === 5) return '#27ae60'; // Green
-  if (value === 25) return '#2980b9'; // Blue
-  if (value === 100) return '#c0392b'; // Red
-  if (value === 500) return '#f1c40f'; // Yellow/Gold
+  if (value === 5) return '#27ae60';
+  if (value === 25) return '#2980b9';
+  if (value === 100) return '#c0392b';
+  if (value === 500) return '#f1c40f';
   return '#ccc';
 }

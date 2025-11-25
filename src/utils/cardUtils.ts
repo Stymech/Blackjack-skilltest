@@ -11,11 +11,9 @@ const BASE_URL = import.meta.env.BASE_URL;
 
 export function getCardImagePath(rank: Rank, suit: Suit): string {
   const svgRank = SVG_RANK_MAP[rank];
-  // Remove the leading slash and use BASE_URL instead
   return `${BASE_URL}cards/${svgRank}${suit}.svg`; 
 }
 
 export function getCardBackPath(): string {
-  // Remove the leading slash and use BASE_URL instead
   return `${BASE_URL}cards/1B.svg`; 
 }

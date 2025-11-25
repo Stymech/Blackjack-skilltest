@@ -141,7 +141,6 @@ export function gameReducer(state: GameState, action: Action): GameState {
                     message = state.message || `Blackjack! You won $${Math.floor(state.currentBet * 1.5)}.`;
                     break;
                 case 'WIN':
-                    // Use the existing message if provided (e.g., from a Dealer Bust), otherwise create a generic one
                     message = state.message || `You win! You won $${state.currentBet}.`;
                     break;
                 case 'PUSH':
@@ -208,7 +207,7 @@ export function gameReducer(state: GameState, action: Action): GameState {
             if (isBust(dealer)) {
                 return {
                     ...state, shoe, dealer,
-                    phase: 'RESULT', // Go straight to result for dealer bust
+                    phase: 'RESULT',
                     message: `Dealer Bust! (${calculateHandValue(dealer)}). You win!`,
                 };
             }

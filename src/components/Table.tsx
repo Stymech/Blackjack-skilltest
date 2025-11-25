@@ -239,9 +239,9 @@ export default function Table({ state, onHit, onStand, onNew, onContinue, onBet,
       width: '100%', 
       height: '100%', 
       overflow: 'hidden',
-      userSelect: 'none',        // FIX: Prevents text selection cursor
-      WebkitUserSelect: 'none',  // FIX: Safari support
-      cursor: 'default',         // FIX: Forces standard arrow cursor
+      userSelect: 'none',
+      WebkitUserSelect: 'none',
+      cursor: 'default',
     }}>
       {/* HANDS CONTAINER: Only manages Dealer/Player layout at top of screen */}
       <motion.div
@@ -300,13 +300,9 @@ export default function Table({ state, onHit, onStand, onNew, onContinue, onBet,
       </motion.div>
 
       {/* --- SECTION 2: BETTING & GAME CONTROLS (ABSOLUTE ELEVATOR) --- */}
-      {/* This element stays grounded at bottom:0 and only animates its Y transform. */}
-      {/* This guarantees no clipping because layout properties never change. */}
       <motion.div 
         initial={false}
         animate={{ 
-          // Betting Phase: Move UP to vertical center (-50vh)
-          // Playing Phase: Move UP to lower quarter (-25vh) - this ensures it's high enough!
           y: showHandViews ? '-25vh' : '-50vh' 
         }}
         transition={{
@@ -316,7 +312,7 @@ export default function Table({ state, onHit, onStand, onNew, onContinue, onBet,
         }}
         style={{ 
           position: 'absolute',
-          bottom: 0, // Anchor strictly to bottom
+          bottom: 0,
           left: 0,
           right: 0,
           display: 'flex',

@@ -11,7 +11,7 @@
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
-    box-shadow: 0 4px 0 #333; /* For a subtle 3D effect */
+    box-shadow: 0 4px 0 #333;
     position: relative;
     top: 0;
     cursor: default;
@@ -57,7 +57,7 @@
     box-shadow: 0 2px 0 #333;
 }
 
-/* --- NEW: Base style for the Deal button (mimics Hit/Stand) --- */
+/* --- Base style for the Deal button (mimics Hit/Stand) --- */
 .deal-button {
     background-color: #4CAF50; /* Green (similar to Hit) */
     color: white;
@@ -71,7 +71,7 @@
     box-shadow: 0 2px 0 #333;
 }
 
-/* --- NEW: Base style for the Clear button (mimics Stand/Neutral) --- */
+/* --- Base style for the Clear button (mimics Stand/Neutral) --- */
 .clear-button {
     background-color: #e74c3c; /* Red/Neutral tone */
     color: white;
@@ -94,7 +94,7 @@
     top: 0;
 }
 
-/* --- New Game Button (in Result Overlay) --- */
+/* --- Game Button (in Result Overlay) --- */
 .new-game-button {
     padding: 10px 15px;
     font-size: 18px;
