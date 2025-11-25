@@ -1,4 +1,4 @@
-/* --- Blackjack Table Styles --- */
+/* // src/components/Table.css */
 
 .action-button {
     padding: 12px 24px;
@@ -14,6 +14,11 @@
     box-shadow: 0 4px 0 #333; /* For a subtle 3D effect */
     position: relative;
     top: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* Base style for the Hit button */
@@ -24,7 +29,7 @@
 
 /* Hover effect for Hit */
 .hit-button:hover:not(:disabled) {
-    background-color: #5cb85c;
+    background-color: #6cd46c;
 }
 
 /* Active (click) effect for Hit */
@@ -42,7 +47,7 @@
 
 /* Hover effect for Stand */
 .stand-button:hover:not(:disabled) {
-    background-color: #3399ff;
+    background-color: #5eaeff;
 }
 
 /* Active (click) effect for Stand */
@@ -52,7 +57,35 @@
     box-shadow: 0 2px 0 #333;
 }
 
-/* Disabled state (for both Hit and Stand) */
+/* --- NEW: Base style for the Deal button (mimics Hit/Stand) --- */
+.deal-button {
+    background-color: #4CAF50; /* Green (similar to Hit) */
+    color: white;
+}
+.deal-button:hover:not(:disabled) {
+    background-color: #6cd46c;
+}
+.deal-button:active:not(:disabled) {
+    background-color: #3d8840;
+    top: 2px;
+    box-shadow: 0 2px 0 #333;
+}
+
+/* --- NEW: Base style for the Clear button (mimics Stand/Neutral) --- */
+.clear-button {
+    background-color: #e74c3c; /* Red/Neutral tone */
+    color: white;
+}
+.clear-button:hover:not(:disabled) {
+    background-color: #ff6b6b;
+}
+.clear-button:active:not(:disabled) {
+    background-color: #a33527;
+    top: 2px;
+    box-shadow: 0 2px 0 #333;
+}
+
+/* Disabled state (for all action buttons) */
 .action-button:disabled {
     background-color: #cccccc;
     color: #666;
